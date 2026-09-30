@@ -98,12 +98,4 @@ def login():
         return jsonify({'error': 'Failed to process login', 'details': str(e)}), 500
 
 if __name__ == '__main__':
-    print('=' * 50)
-    print('Starting LocalCoinSwap Flask Server...')
-    print('=' * 50)
-    try:
-        app.run(debug=True, port=5000, host='127.0.0.1')
-    except Exception as e:
-        print(f'Error starting server: {e}')
-        import traceback
-        traceback.print_exc()
+        app.run(port=5000, host='0.0.0.0')
